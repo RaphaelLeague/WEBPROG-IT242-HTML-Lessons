@@ -5,14 +5,14 @@ body {
     background-size: cover;
 }
 
-h1{
+h1 {
     color: white;
     text-align: center;
 }
 
-.info{
+.info {
     color: white;
     text-align: center;
+    text-size-adjust: 20;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
