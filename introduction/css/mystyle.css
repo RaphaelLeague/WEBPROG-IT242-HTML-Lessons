@@ -9,12 +9,8 @@ h1{
 
 .info{
     color: blue;
-    text-align: left;
+    text-align: center;
     text-size-adjust: 20;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.pic1{
-    color: blue;
-    text-align: center;
-}
