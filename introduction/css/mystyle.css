@@ -7,10 +7,20 @@ h1{
     text-align: center;
 }
 
-.info{
-    color: blue;
-    text-align: center;
-    text-size-adjust: 20;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.container {
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:black
+    border: 1px;
+    border-radius: 8px;
 }
 
+.container p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
