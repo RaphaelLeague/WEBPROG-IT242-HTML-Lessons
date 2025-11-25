@@ -1,9 +1,10 @@
 .container {
   display: flex;
-  flex-wrap: nowrap;
-  background-color: rgb(155, 58, 58);
+  height: 200px;
+  align-items: stretch;
+  background-color: DodgerBlue;
 }
- 
+
 .container div {
   background-color: #f1f1f1;
   width: 100px;
