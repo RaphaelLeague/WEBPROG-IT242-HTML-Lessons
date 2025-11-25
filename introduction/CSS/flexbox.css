@@ -13,3 +13,8 @@
   text-align: center;  
   font-size: 30px;
 }
+
+body {
+    font-size: 14;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
