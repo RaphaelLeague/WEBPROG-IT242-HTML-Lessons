@@ -1,3 +1,13 @@
+body {
+    background-color: dodgerblue;
+}
+
+.info{
+    color: white;
+    text-size-adjust: 20;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .container {
   display: flex;
   height: 200px;
@@ -12,14 +22,4 @@
   padding: 10px;
   text-align: center;  
   font-size: 30px;
-}
-
-body {
-    background-color: dodgerblue;
-}
-
-.info{
-    color: white;
-    text-size-adjust: 20;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
