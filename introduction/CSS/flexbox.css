@@ -15,6 +15,11 @@
 }
 
 body {
-    font-size: 14;
+    background-color: dodgerblue;
+}
+
+.info{
+    color: white;
+    text-size-adjust: 20;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
