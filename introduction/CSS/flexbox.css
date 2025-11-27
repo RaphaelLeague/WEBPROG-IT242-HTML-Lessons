@@ -23,3 +23,15 @@ body {
   text-align: center;  
   font-size: 30px;
 }
+
+.movie{
+  color: white;
+  text-size-adjust: 20;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.music{
+  color: white;
+  text-size-adjust: 20;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
