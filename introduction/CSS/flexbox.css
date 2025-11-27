@@ -6,7 +6,6 @@ body {
     color: white;
     text-size-adjust: 20;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
 }
 
 .container {
@@ -14,29 +13,25 @@ body {
   height: 200px;
   align-items: stretch;
   background-color: DodgerBlue;
-  align-items: center;
 }
 
-.container div {
+.container {
   background-color: #f1f1f1;
   width: 200px;
   margin: 10px;
   padding: 10px;
   text-align: center;  
   font-size: 30px;
-  place-items: center;
 }
 
 .movie{
   color: white;
   text-size-adjust: 20;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align: center;
 }
 
 .music{
   color: white;
   text-size-adjust: 20;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
 }
