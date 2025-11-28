@@ -7,9 +7,12 @@ p {
 }
 
 .pic { 
-    display: block;
-    margin:auto
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
