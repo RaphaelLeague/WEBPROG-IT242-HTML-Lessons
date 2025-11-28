@@ -1,8 +1,14 @@
 h1 {
     text-align: center;
 }
+
 p {
     align-items: center;
+}
+
+.pic { 
+    display: block;
+    margin:auto
 }
 .container {
   display: grid;
