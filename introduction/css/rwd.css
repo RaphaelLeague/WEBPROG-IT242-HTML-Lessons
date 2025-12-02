@@ -18,7 +18,11 @@ body {
   background-color: white;
   gap: 10px;  
 }
- 
+ .mytanggol {
+  width: 100%;
+  height: auto;
+}
+
 .header {
   grid-area: header;
   background-color: #6495ED;
