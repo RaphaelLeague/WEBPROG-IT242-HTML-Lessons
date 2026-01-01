@@ -34,9 +34,7 @@
         .profile-img:hover {
             transform: scale(1.1) rotate(2deg);
         }
-        .nav-link {
-            cursor: pointer;
-        }
+        .nav-link { cursor: pointer; }
         .fade-section {
             display: none;
             animation: fadeIn 0.6s ease forwards;
@@ -51,12 +49,12 @@
         }
         .skill-badge:hover {
             transform: scale(1.1);
-            background-color: #0d6efd !important;
         }
     </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
     <div class="container">
         <span class="navbar-brand fw-bold">Raphael League</span>
@@ -65,10 +63,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" onclick="showSection('Home')">Home</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="showSection('About Me')">About</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="showSection('Skills')">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="showSection('Contact Info')">Contact</a></li>
+                <!-- FIXED: IDs must MATCH section IDs exactly -->
+                <li class="nav-item"><a class="nav-link" onclick="showSection('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showSection('about')">About</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showSection('skills')">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -88,30 +87,38 @@
     <div id="about" class="fade-section glass p-5 text-white">
         <h3 class="fw-bold mb-3">About Me</h3>
         <p>
-            I’m an IT student who likes learning by actually doing things instead of just reading about them.
-            I enjoy experimenting with code, figuring out how things work, and building projects that feel useful or fun.
+            I’m an IT student who prefers learning by actually doing things. I enjoy experimenting with code,
+            breaking stuff, fixing it, and slowly understanding how systems work.
         </p>
         <p>
-            I’m not perfect at everything, but I’m always curious and willing to learn.
-            When I get stuck, I try to break problems down and improve step by step.
-            I also enjoy working with others and sharing ideas while learning along the way.
+            I’m always trying to improve, whether that’s technical skills or how I work with others.
+            I like collaborating, sharing ideas, and learning from mistakes along the way.
         </p>
         <button class="btn btn-outline-light mt-2" onclick="showSection('skills')">Check Out My Skills</button>
     </div>
 
     <!-- SKILLS -->
     <div id="skills" class="fade-section glass p-5 text-white">
-        <h3 class="fw-bold mb-3">Skills</h3>
-        <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-light text-dark skill-badge">HTML</span>
-            <span class="badge bg-light text-dark skill-badge">CSS</span>
-            <span class="badge bg-light text-dark skill-badge">Bootstrap</span>
-            <span class="badge bg-light text-dark skill-badge">JavaScript</span>
-            <span class="badge bg-light text-dark skill-badge">Flutter</span>
-            <span class="badge bg-light text-dark skill-badge">SQL</span>
-            <span class="badge bg-light text-dark skill-badge">Git</span>
+        <h3 class="fw-bold mb-3">Technical Skills</h3>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <!-- Tooltips explain skills -->
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Comfortable creating queries, managing tables, and understanding basic database design.">SQL</span>
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Building responsive layouts and styling pages using modern CSS techniques.">HTML & CSS</span>
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Using Bootstrap components to quickly build clean and responsive interfaces.">Bootstrap</span>
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Basic scripting for interactivity, DOM manipulation, and simple logic.">JavaScript</span>
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Basic mobile app development and UI building using Flutter.">Flutter</span>
+            <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Version control, pushing projects, and collaborating using GitHub.">Git & GitHub</span>
         </div>
-        <p class="mt-3 opacity-75">Hover over skills to interact ✨</p>
+
+        <h3 class="fw-bold mb-3">Soft Skills</h3>
+        <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-warning text-dark skill-badge" data-bs-toggle="tooltip" title="Able to work well with others, share ideas, and contribute in group projects.">Teamwork</span>
+            <span class="badge bg-warning text-dark skill-badge" data-bs-toggle="tooltip" title="Breaking problems into smaller steps and finding practical solutions.">Problem Solving</span>
+            <span class="badge bg-warning text-dark skill-badge" data-bs-toggle="tooltip" title="Open to learning new tools, feedback, and improving skills over time.">Willingness to Learn</span>
+            <span class="badge bg-warning text-dark skill-badge" data-bs-toggle="tooltip" title="Can explain ideas clearly and listen to others during discussions.">Communication</span>
+        </div>
+
+        <p class="mt-3 opacity-75">Hover over a skill to see what it means ✨</p>
     </div>
 
     <!-- CONTACT -->
@@ -135,9 +142,12 @@
 <script>
     function showSection(id) {
         document.querySelectorAll('.fade-section').forEach(sec => sec.style.display = 'none');
-        const target = document.getElementById(id);
-        target.style.display = 'block';
+        document.getElementById(id).style.display = 'block';
     }
+
+    // Enable Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
 
     // Show home by default
     showSection('home');
