@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea, #45206b);
+    background: linear-gradient(135deg, #0c0c0d, #45206b);
     color: #fff;
     min-height: 100vh;
     padding-top: 70px;
@@ -17,7 +17,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, #2c105d, #4814a1);
+    background: linear-gradient(135deg, #1c1c1d, #321e53);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,12 +88,12 @@ body {
 }
 
 .profile-img {
-    width: 165px;
-    height: 165px;
+    width: 190px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ffdd59;
     margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgb(116 95 95 / 30%));
 }
 
 .cta-button {
@@ -116,7 +116,7 @@ body {
 
 #edbackground h2 {
     text-align: left;
-    color: #ffdd59;
+    color: #ffcb00;
     margin-bottom: 15px;
 }
 
@@ -184,7 +184,6 @@ body {
 }
 
 #contact p {
-    padding-top: 20px;
     text-align: center;
     margin: 8px 0;
 }
@@ -198,4 +197,3 @@ body {
     color: #fff;
 
 }
-
