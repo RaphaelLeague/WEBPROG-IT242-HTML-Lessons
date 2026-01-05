@@ -59,6 +59,7 @@ body {
 }
 
 .studentschool {
+    padding-bottom: 10px;
     font-size: 21px;
     font-weight: bold;
     color: #ffffff;
@@ -103,7 +104,6 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 50px;
-    /* Makes it a pill shape */
     cursor: pointer;
     margin-top: 20px;
     transition: transform 0.2s, background-color 0.2s;
@@ -112,7 +112,6 @@ body {
 .cta-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-    /* Slightly grows when you hover */
 }
 
 #edbackground h2 {
@@ -196,4 +195,5 @@ body {
 
 #contact a:hover {
     color: #fff;
+
 }
