@@ -5,56 +5,17 @@
     <title>Interactive Profile | Raphael League</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap 5 CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0d6efd, #6610f2);
-            min-height: 100vh;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            transition: transform 0.3s ease;
-        }
-        .profile-img:hover {
-            transform: scale(1.1) rotate(2deg);
-        }
-        .nav-link { cursor: pointer; }
-        .fade-section {
-            display: none;
-            animation: fadeIn 0.6s ease forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .skill-badge {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
     <div class="container">
         <span class="navbar-brand fw-bold">Raphael League</span>
@@ -63,7 +24,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <!-- FIXED: IDs must MATCH section IDs exactly -->
                 <li class="nav-item"><a class="nav-link" onclick="showSection('home')">Home</a></li>
                 <li class="nav-item"><a class="nav-link" onclick="showSection('about')">About</a></li>
                 <li class="nav-item"><a class="nav-link" onclick="showSection('skills')">Skills</a></li>
@@ -75,15 +35,14 @@
 
 <div class="container py-5">
 
-    <!-- HOME -->
     <div id="home" class="fade-section glass p-5 text-center text-white">
-        <img src="images/profile.jpg" class="profile-img mb-3" alt="Profile">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQHLlJaca_lZXQ/profile-displayphoto-crop_800_800/B56ZqnH_RXHQAI-/0/1763740481368?e=1769040000&v=beta&t=K5TvXsH9Xq8HxU2Dmd-N5lyujhZjVLMgdrv9oyiwEfQ"
+             class="profile-img mb-3" alt="Profile">
         <h1 class="fw-bold">Raphael League</h1>
         <p class="opacity-75">IT Student - Asia Pacific College</p>
         <button class="btn btn-light mt-3" onclick="showSection('about')">Explore Profile</button>
     </div>
 
-    <!-- ABOUT -->
     <div id="about" class="fade-section glass p-5 text-white">
         <h3 class="fw-bold mb-3">About Me</h3>
         <p>
@@ -97,11 +56,9 @@
         <button class="btn btn-outline-light mt-2" onclick="showSection('skills')">Check Out My Skills</button>
     </div>
 
-    <!-- SKILLS -->
     <div id="skills" class="fade-section glass p-5 text-white">
         <h3 class="fw-bold mb-3">Technical Skills</h3>
         <div class="d-flex flex-wrap gap-2 mb-4">
-            <!-- Tooltips explain skills -->
             <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Comfortable creating queries, managing tables, and understanding basic database design.">SQL</span>
             <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Building responsive layouts and styling pages using modern CSS techniques.">HTML & CSS</span>
             <span class="badge bg-light text-dark skill-badge" data-bs-toggle="tooltip" title="Using Bootstrap components to quickly build clean and responsive interfaces.">Bootstrap</span>
@@ -118,10 +75,9 @@
             <span class="badge bg-warning text-dark skill-badge" data-bs-toggle="tooltip" title="Can explain ideas clearly and listen to others during discussions.">Communication</span>
         </div>
 
-        <p class="mt-3 opacity-75">Hover over a skill to see what it means ✨</p>
+        <p class="mt-3 opacity-75">Hover over a skill to see what it means</p>
     </div>
 
-    <!-- CONTACT -->
     <div id="contact" class="fade-section glass p-5 text-white">
         <h3 class="fw-bold mb-3">Contact</h3>
         <p>Email: raphael.league@email.com</p>
@@ -136,7 +92,6 @@
     <small>&copy; 2026 Raphael League</small>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
@@ -145,11 +100,9 @@
         document.getElementById(id).style.display = 'block';
     }
 
-    // Enable Bootstrap tooltips
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
 
-    // Show home by default
     showSection('home');
 </script>
 
