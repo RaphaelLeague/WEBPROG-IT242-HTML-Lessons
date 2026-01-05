@@ -180,10 +180,10 @@ body {
 #contact h2 {
     text-align: center;
     color: #ffdd59;
-    margin-bottom: 15px;
 }
 
 #contact p {
+    padding-top: 25%;
     text-align: center;
     margin: 8px 0;
 }
