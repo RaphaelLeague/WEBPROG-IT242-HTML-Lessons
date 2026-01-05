@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea, #45206b);
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #2c105d, #4814a1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd59;
+}
+
+.section {
+    display: none;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.section:target {
+    display: block;
+}
+
+.studentschool {
+    font-size: 21px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 27px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profile-img {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffdd59;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    /* Makes it a pill shape */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    /* Slightly grows when you hover */
+}
+
+#edbackground h2 {
+    text-align: left;
+    color: #ffdd59;
+    margin-bottom: 15px;
+}
+
+#edbackground p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.education-side,
+.projects-side {
+    flex: 1;
+}
+
+.info-container h3 {
+    color: #ffdd59;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.projects-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects-side li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #ffdd59;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: #ffdd59;
+    color: #000;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #ffdd59;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    text-align: center;
+    margin: 8px 0;
+}
+
+#contact a {
+    color: #ffdd59;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #fff;
+}
