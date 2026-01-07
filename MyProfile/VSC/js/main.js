@@ -1,34 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section');
-    const btn = document.getElementById('go-btn');
+    const filterButtons = document.querySelectorAll('.filter-buttons button');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    function showSection(id) {
-        sections.forEach(s => s.style.display = 'none');
-        const t = document.getElementById(id);
-        if (t) t.style.display = 'block';
-    }
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
 
-    // initial display: if hash -> show that section, else show home
-    const hash = location.hash.replace('#', '');
-    if (hash && document.getElementById(hash)) showSection(hash);
-    else showSection('home');
+            galleryItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
 
-    if (btn) {
-        btn.addEventListener('click', () => {
-            // hide home and the button, show edbackground
-            const home = document.getElementById('home');
-            const ed = document.getElementById('edbackground');
-            if (home) home.style.display = 'none';
-            if (ed) ed.style.display = 'block';
-            btn.style.display = 'none';
-            // update hash without scrolling
-            history.replaceState(null, '', '#edbackground');
+            // Highlight active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
         });
-    }
-
-    // keep navigation links working (anchors)
-    window.addEventListener('hashchange', () => {
-        const id = location.hash.replace('#', '');
-        if (id && document.getElementById(id)) showSection(id);
     });
 });
